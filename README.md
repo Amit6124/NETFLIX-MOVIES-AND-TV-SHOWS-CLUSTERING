@@ -1,41 +1,48 @@
 # NETFLIX-MOVIES-AND-TV-SHOWS-CLUSTERING
 
 
-Business Context
+Netflix, the world’s largest on-demand internet streaming media and online DVD movie rental service provider.it Founded August 29, 1997, in Los Gatos, California by Marc and Reed. It has 69 million members in over 60 countries enjoying more than 100 million hours of TV shows and movies per day Netflix is the world’s leading internet entertainment service with enjoying TV series, documentaries, and feature films across a wide variety of genres and languages. I was curious to analyze the content released in Netflix platform which led me to create these simple, interactive, and exciting visualizations and find similar groups of people.
 
-This dataset consists of tv shows and movies available on Netflix as of 2019. The dataset is collected from Flixable which is a third-party Netflix search engine. In 2018, they released an interesting report which shows that the number of TV shows on Netflix has nearly tripled since 2010. The streaming service's number of movies has decreased by more than 2,000 titles since 2010, while its number of TV shows has nearly tripled. It will be interesting to explore what all other insights can be obtained from the same dataset. Integrating this dataset with other external datasets such as IMDB ratings, rotten tomatoes can also provide many interesting findings.
+# 📖 Problem Statement
+The goal of this project is to find similarity within groups of people to build a movie recommendation system for users. We are going to analyze a dataset from the Netflix database to explore the characteristics that people share in movies. We have experienced it ourselves or have been in the room, the endless scrolling of selecting what to watch. Users spend more time deciding what to watch than watching their movie.
 
-In this project, you are required to do
+# 📖 Data Summery
+This dataset consists of tv shows and movies available on Netflix as of 2019. The dataset is collected from Fixable which is a third-party Netflix search engine. In 2018, they released an interesting report which shows that the number of TV shows on Netflix has nearly tripled since 2010. The streaming service’s number of movies has decreased by more than 2,000 titles since 2010, while its number of TV shows has nearly tripled. It will be interesting to explore what all other insights can be obtained from the same dataset. Integrating this dataset with other external datasets such as IMDB ratings, rotten tomatoes can also provide many interesting findings.
+show_id : Unique ID for every Movie / Tv Show
+type : Identifier - A Movie or TV Show
+title : Title of the Movie / Tv Show
+director : Director of the Movie
+cast : Actors involved in the movie / show
+country : Country where the movie / show was produced
+date_added : Date it was added on Netflix
+release_year : Actual Release Year of the movie / show
+rating : TV Rating of the movie / show
+duration : Total Duration - in minutes or number of seasons
+listed_in : Genere
+description: The Summary description
 
-Exploratory Data Analysis
 
-Understanding what type content is available in different countries If Netflix has been increasingly focusing on TV rather than movies in recent years.
 
-Clustering similar content by matching text-based features
 
-Conclusion
+# Business Goals
+Improve rating system: Use the star rating rather than a thumbs up and thumbs down rating system to help guide in decision making when selecting a film.
+Separate recently watched: Hide the movies and TV-Shows on a separate page so users don’t have to scroll through those already seen. — users have to do more searching
+Randomize a Movie: When users are unsure of what to choose, Netflix will randomly select something to watch based on their viewing history.
+Show popular/trending films: Create a category which showcases only trending content.
+Connect with Friends: It was proven that users watch shows and movies based on friend recommendations so this may be useful for keeping users locked into Netflix for longer.
+Organizing films by the mood: Alongside the genres filter, it may be possible to organize content based on the mood that is experienced after watching the film.
 
-1.Conducted analysis on a Netflix dataset to gain insights into the content available on the platform.
 
-2.Explored various visualizations to understand the distribution of TV shows and movies, their durations, genres, and countries of origin.
+## Steps involved:
+The full code for this article can be found here. It is implemented in Python and different clustering algorithms are used. Below is a brief description of the general approach that I employed:
 
-3.Performed statistical tests to analyze differences in average durations between movies and TV shows, distribution of genres, and relationship between release year and number of seasons.
+**Data cleaning and pre-processing** 
+Here I checked and dealt with missing and duplicate variables from the data set as these can grossly affect the performance of different machine learning algorithms (many algorithms do not tolerate missing data).
 
-4.Handled missing values in columns such as director, cast, country, and rating, ensuring the dataset is clean and ready for analysis.
+**Exploratory Data Analysis**: Here I wanted to gain important statistical insights from the data and the things that I checked for were the distributions of the different attributes, correlations of the attributes with each other and the target variable and I calculated important odds and proportions for the categorical attributes.
 
-5.Utilized text normalization techniques such as lemmatization and text vectorization using TF-IDF to process and represent textual data.
+**Clustering**: Clustering or cluster analysis is a machine learning technique, which groups the unlabelled dataset. It can be defined as "A way of grouping the data points into different clusters, consisting of similar data points. The objects with the possible similarities remain in a group that has less or no similarities with another group." It does it by finding some similar patterns in the unlabelled dataset such as shape, size, colour, behaviour, etc., and divides them as per the presence and absence of those similar patterns. It is an unsupervised learning method; hence no supervision is provided to the algorithm, and it deals with the unlabeled dataset. After applying this clustering technique, each cluster or group is provided with a cluster-ID. ML systems can use this id to simplify the processing of large and complex datasets.
 
-6.Explored dimensionality reduction using PCA to reduce the number of features while preserving a significant amount of variance in the data.
-
-7.Applied clustering algorithms such as k-means, hierarchical clustering, and DBSCAN to cluster the movies and TV shows based on their features.
-
-8.Evaluated the clustering models using metrics such as silhouette score to understand the quality and structure of the clusters.
-
-8.Identified the number of clusters that provide the highest silhouette score, enabling better understanding of the underlying patterns and similarities in the data.
-
-9.Chose the final model based on the evaluation metrics and business requirements, considering factors such as interpretability and performance. Generated insights into the clusters, identifying distinct groups of movies and TV shows based on their features.
-
-10.Considered the business impact of the model, highlighting the potential benefits of better content categorization and recommendation, improved user experience, and targeted marketing strategies.
-
-11.Concluded the project with recommendations for further analysis and model refinement, considering factors like additional data sources, feature engineering, and alternative modeling techniques.
+# Conclusion
+In conclusion, tailored recommendations can be made based on information about movies and TV shows. In addition, similar models can be developed to provide valuable recommendations to consumers in other domains. It will solve for improved movie and TV-Show selection times with a considerable growth in satisfaction of the content being consumed leading to more user engagement and greater trust in Netflix recommendations.
 
